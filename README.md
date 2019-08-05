@@ -1,3 +1,10 @@
-# 100DaysOfCode
+FreeCodeCamp's Responsive Web Design Projects!
 
-I'm a complete code newbie. Learning to use GitHub and posting my progress as I learn to code!
+These are the projects that I completed while going through <a href="https://learn.freecodecamp.org/">FreeCodeCamp's Responsive Web Design</a> course. 
+
+Projects:
+Tribute Page
+Survey Form
+Product Landing Page
+Technical Documentation Page
+Personal Portfolio Webpage
