@@ -1,10 +1,11 @@
-FreeCodeCamp's Responsive Web Design Projects!
+<h2>FreeCodeCamp's Responsive Web Design Projects!</h2>
 
-These are the projects that I completed while going through <a href="https://learn.freecodecamp.org/">FreeCodeCamp's Responsive Web Design</a> course. 
+<i>The attached '.html' files are the projects that I completed while going through <a href="https://learn.freecodecamp.org/">FreeCodeCamp's Responsive Web Design</a> course. </i>
 
-Projects:
-Tribute Page
-Survey Form
-Product Landing Page
-Technical Documentation Page
-Personal Portfolio Webpage
+<ul><strong>Projects:</strong>
+  <li>Tribute Page</li>
+  <li>Survey Form</li>
+<li>Product Landing Page</li>
+<li>Technical Documentation Page</li>
+<li>Personal Portfolio Webpage</li>
+  </ul>
