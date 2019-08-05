@@ -1,0 +1,198 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|The+Girl+Next+Door&display=swap" rel="stylesheet">
+ 
+<html>
+ <head>
+  <style>
+    * {
+      box-sizing: border-box;
+      }
+
+    body {
+      font-family: 'Swanky and Moo Moo', cursive;
+      font-family: 'The Girl Next Door', cursive;
+      background: #f0efef;
+      color: #363940;
+      line-height: 1.5;
+      padding: 1em;
+      }
+
+     #form-container {
+      margin: 50px;
+      padding: 20px 10px 20px 10px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      text-align: center;
+      }
+
+     #image-container {
+      background-image: url(https://i.ibb.co/4mJh4Gy/fly.jpg);
+      background-size: cover;
+      height: 200px;
+      width: auto;
+      margin: auto;
+      border: 3px solid #006000;
+      padding: 10px;  
+      }
+
+    #title {
+      background: rgba(25, 25, 50, 0.30);
+      color: white;
+      max-width: 1750px;
+      max-height: 175px;
+      text-shadow: 5px 2px 10px black;
+      mix-blend-mode: overlay;
+      font-size: 3.5em;
+      letter-spacing: .25em;
+      line-height: 1.6em;
+      text-align: center;
+      margin: 0 auto;
+      }
+
+    #description {
+      text-align: center;
+      font-size: 1.35em;
+      }
+
+    .blocks form {
+      display: grid;
+      grid-template-columns: 1fr;
+      }
+
+    #textarea {
+      width: 300px;
+      height: 200px;
+       }
+
+    #submit {
+      background-color: #006000;
+      color: white;
+      border-radius: 30px;
+      font-size: 1em;
+      padding: 10px;
+      margin: 10px;
+      }
+
+    #submit:hover {
+      background-color: #008000;
+      }
+ </style>
+  </head>
+  
+  <body>
+    <div id="image-container">
+      <h1 id="title">Survey<br>Form</h1>
+      </div>
+    <div id="form-container">
+    <div class="wrapper">
+    <p id="description">This is a brief survey to gather a better understanding of how to make a form.</p>
+    
+    <div class="blocks">
+    <form id="survey-form">
+      <p>
+        <label for="name" id="name-label">* Name  </label>
+        <input id="name" type="text" placeholder="enter your name" required> 
+      </p> 
+      
+      <p>
+       <label for="email" id="email-label">* Email </label>
+       <input id="email" type="email" placeholder="enter your email" required>
+      </p>
+      
+      <p>
+       <label for="number" id="number-label">* Age </label>
+       <input id="number" type="number" min="1" max="150" placeholder="age" required>
+      </p>
+      
+      <p>
+       <label for="free-time" id="dropdown">What do you enjoy doing the most out of the following?</label>
+       <select name="free-time" id="dropdown">
+        <option value="1">Watching TV</option>
+        <option value="2">Eating food</option>
+        <option value="3">Playing video games</option>
+        <option value="4">Talking with people</option>
+        <option value="5">Surfing the Internet</option>
+        <option value="6">Reading a book</option>
+        <option value="7">Learning a new skill</option>
+        <option value="8">Working out</option>
+        <option value="9">Sleeping</option>
+        </select>
+     </p>
+    
+      
+     <p>
+      <label for="animals" id="animals">If you had to choose one of the following animals to be for a day, which species would you pick?
+      </label>
+      <ul style="list-style: none;">
+       <li class="animal" id="animal">
+        <label><input type="radio" name="animal" value="1">Elephant</label></li>
+       <li class="animal" id="animal">
+        <label><input type="radio" name="animal" value="1">Wolf</label></li>
+       <li class="animal" id="animal">
+        <label><input type="radio" name="animal" value="2">Lion</label></li>
+       <li class="animal" id="animal">
+        <label><input type="radio" name="animal" value="3">Spider</label></li>
+       <li class="animal" id="animal">
+         <label><input type="radio" name="animal" value="4">Chimpanze</label></li>
+       <li class="animal" id="animal">
+        <label><input type="radio" name="animal" value="5">Frog</label></li>
+       <li class="animal" id="animal">
+        <label><input type="radio" name="animal" value="6">Raven</label></li>
+       <li class="animal" id="animal">
+         <label><input type="radio" name="animal" value="7">Orca</label></li>
+      </ul>
+    </p>
+      
+    <p>
+      <label for="crypto" id="dropdown">What cryptocurrency do you hold the most of?</label>
+      <select name="crypto" id="dropdown">
+        <option disable selected value>HODL STRONG</option>
+        <option value="1">Bitcoin </option>
+        <option value="2">Ethereum</option>
+        <option value="3">Litecoin</option>
+        <option value="4">Tron</option>
+        <option value="5">Ripple</option>
+        <option value="6">Monero</option>
+        <option value="7">Chainlink</option>
+        <option value="8">Other</option>
+      </select> 
+   </p>
+      
+   <p>
+    <label for="sun" id="sun">What color is the sun right now?  (Check all that apply):</label>
+    <ul style="list-style: none;">
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="1">White</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="2">Fire</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="3">Marmalade</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="4">Dandelion</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="5">Rainbow</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="6">Scarlet</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="7">Tangerine</label></li>
+     <li class="sun">
+       <label><input type="checkbox" name="sun" value="8">Rose</label></li>
+   </ul>
+  </p>
+        
+  <p>
+   <label>What's a good quote, or inspiring message, that you feel helps motivate you to persue your goals in life?</label>
+    <textarea name="textarea" id="textarea" rows="5" placeholder="Type the magical words into this box, please."></textarea>
+  </p>
+  
+  <p>
+    <button id="submit" type="submit">Submit</button>
+  </p> 
+      
+  </form>
+ </div>
+</div>
+</div>
+</body>
+</html>
