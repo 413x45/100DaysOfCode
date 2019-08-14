@@ -1,0 +1,430 @@
+<!--DOCTYPE html>
+<head>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link href="https://fonts.googleapis.com/css?family=DM+Serif+Text|Permanent+Marker&display=swap" rel="stylesheet">
+
+<style>
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "navbar main main";
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* nav side bar */
+nav {
+  grid-area: navbar;
+  top: 0;
+  font-size: 2em;
+  font-family: 'Permanent Marker', cursive;
+  position: fixed;
+  height: 100vh;
+  width: 75vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#navbar {
+  max-width: 25vw;
+}
+
+nav header {
+ text-align: center;
+ line-height: 1;
+ padding: 15px;
+}
+
+
+nav ul {
+  margin: 0 auto;
+  font-decoration: none;
+  list-style-type: none;
+  background-image: url(https://i.ibb.co/ZTxKhk1/camera-lens-long.jpg);
+  background-size: 25vw;
+  border: 2px solid #3c4f65;
+}
+
+nav li{
+  align-text: left;
+  padding: 10px;
+  line-height: 1;
+  text-shadow: 5px 2px 10px black;
+}
+
+nav li:hover{
+  background: #3c4f65; 
+}
+
+nav a{
+  color: #e6f5ff;
+  text-decoration: none;
+}
+
+/* main doc */
+
+.wrapper {
+  background: #e6f5ff;
+  max-width: 75vw;
+  grid-area: main;
+}
+
+.wrapper header{
+  color: #33313b;
+  font-size: 2em;
+  font-family: 'Permanent Marker', cursive;
+  background: #834c69;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+}
+
+#main-doc {
+  font-family: 'DM Serif Text',   serif;
+  font-size: 1em;
+  margin: 10px;
+}
+
+main article{
+  padding: 20px;
+  line-height: 1.25;
+}
+
+main hr {
+  border: 5px dashed #834c69;
+}
+
+#Exposure li {
+  font-size: 1.5em;
+}
+
+.main-section ul{
+  padding: 0;
+  margin: 0;
+}
+
+code {
+  display: block;
+  list-style-type: none;
+  text-align: center;
+  position: inline-block;
+  line-height: 2;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#Shutter_speed span, #ISO span, #Metering_modes span, #Shooting_modes span, #Depth_of_field span, #Composition span{
+  font-weight: bold;
+}
+
+#histogram-img{
+  width: 35em;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 450px) {
+  nav{
+  display: inline-block;
+  }
+  main{
+    display: inline-block;
+  }
+}
+
+</style>
+</head>
+<div class="container">
+  
+<nav id="navbar">
+  <header>Photography Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#How_cameras_work">How cameras work</a></li>
+    <li><a class="nav-link" href="#Exposure">Exposure</a></li>
+    <li><a class="nav-link" href="#Aperture">Aperture</a></li>
+    <li><a class="nav-link" href="#Shutter_speed">Shutter speed</a></li>
+    <li><a class="nav-link" href="#ISO">ISO</a></li>
+    <li><a class="nav-link" href="#Metering_modes" >Metering modes</a></li>
+    <li><a class="nav-link" href="#Histograms">Histograms</a></li>
+    <li><a class="nav-link" href="#Shooting_modes">Shooting modes</a></li>
+    <li><a class="nav-link" href="#Depth_of_field">Depth of field</a></li>
+    <li><a class="nav-link" href="#White_balance">White balance</a></li>
+    <li><a class="nav-link" href="#Focal_length">Focal length</a></li>
+    <li><a class="nav-link" href="#Crop_factor">Crop factor</a></li>
+    <li><a class="nav-link" href="#Polarizing_filters">Polarizing filters</a></li>
+    <li><a class="nav-link" href="#Composition">Composition</a></li>
+  </ul>
+</nav>
+  
+
+   <div class="wrapper">
+<main id="main-doc">
+    <hr id="line-break">
+    <section class="main-section" id="Introduction">
+   <header>Introduction</header>
+      <article>
+      <p>Digital cameras give a whole new meaning to the idea of painting by numbers. Unlike old-style film cameras, they capture and record images of the world around us using digital technology. In other words, they store photographs not as patterns of darkness and light but as long strings of numbers. This has many advantages: it gives us instant photographs, allows us to edit our pictures, and makes it easier for us to share photographs using cell phones, e-mail, and web sites.
+</p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="How_cameras_work">
+     <header>How cameras work</header>
+      <article>
+      <p>Digital cameras look very much like ordinary film cameras but they work in a completely different way. When you press the button to take a photograph with a digital camera, an aperture opens at the front of the camera and light streams in through the lens. So far, it's just the same as a film camera. From this point on, however, everything is different. There is no film in a digital camera. Instead, there is a piece of electronic equipment that captures the incoming light rays and turns them into electrical signals. This light detector is one of two types, either a charge-coupled device (CCD) or a CMOS image sensor.<br><br>
+
+If you've ever looked at a television screen close up, you will have noticed that the picture is made up of millions of tiny colored dots or squares called pixels. Laptop LCD computer screens also make up their images using pixels, although they are often much too small to see. In a television or computer screen, electronic equipment switches all these colored pixels on and off very quickly. Light from the screen travels out to your eyes and your brain is fooled into see a large, moving picture.<br><br>
+
+In a digital camera, exactly the opposite happens. Light from the thing you are photographing zooms into the camera lens. This incoming "picture" hits the image sensor chip, which breaks it up into millions of pixels. The sensor measures the color and brightness of each pixel and stores it as a number. Your digital photograph is effectively an enormously long string of numbers describing the exact details of each pixel it contains. </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Exposure">
+    <header>Exposure</header>
+      <article>
+      <p>In photography, exposure is the amount of light which reaches your camera sensor or film. It is a crucial part of how bright or dark your pictures appear. By understanding how to expose an image properly, you will be able to capture photographs of the ideal brightness, including high levels of detail in both the shadows and highlight areas. 
+
+<ul><code>The exposure triangle consists of the three most important camera settings: <li>Shutter speed</li> 
+<li>Aperture</li>
+<li>ISO</li>
+        </code></ul>
+        </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Aperture">
+  <header>Aperture</header>
+      <article>
+      <p>Aperture is very similar to the “pupil” of your camera lens. Just like the pupil in your eye, it can open or shrink to change the amount of light that passes through.<br><br>
+
+As the aperture widens, the f/number gets lower and more light is allowed into the camera. This is great for low light but be aware that it’s going to make the depth of field very shallow – not ideal when taking landscapes.<br><br>
+
+The aperture is the preferred setting to set first, as it directly influences how much of your scene is in focus. But, if you are looking to create motion blur, then it is second to the shutter speed.<br><br>
+
+Exposure will be much easier if you can memorize the f/stop scale.<br><br>
+
+        <code>The scale is as follows:<br>f/1.4, f/2, f/2.8, f/4, f/5.6, f/8, f/11, f/16, f/22.</code></p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Shutter_speed">
+  <header>Shutter speed</header>
+      <article>
+      <p>Shutter speed is responsible for two particular things: changing the brightness of your photo, and creating dramatic effects by either freezing action or blurring motion.<br><br>
+        Shutter speed exists because of something known as your camera shutter – which, simply put, is a curtain in front of the camera sensor that stays closed until the camera fires. When the camera fires, the shutter opens and fully exposes the camera sensor to the light that has passed through your lens. After the sensor is done collecting the light, the shutter closes immediately, stopping the light from hitting the sensor.<br><br>
+        Shutter speed is the length of time your camera shutter is open, exposing light onto the camera sensor. Essentially, it’s how long your camera spends taking a photo. 
+        When you use a long shutter speed, you end up exposing your sensor for a significant period of time. The first big effect of shutter speed is motion blur. Slow shutter speeds are also used to photograph the Milky Way or other objects at night, or in dim environments with a tripod. 
+        On the other hand, shutter speed can also be used to do just the opposite – freeze motion. If you use an especially fast shutter speed, you can eliminate motion even from fast-moving objects, like birds in flight, or cars driving past. 
+        Shutter speeds are typically measured in fractions of a second, when they are under a second. <br><br>
+          <ul><code>Here are some examples of different shutter speeds depending on the subject:
+            <li><span>Birds in Flight</span> 1/2000</li>
+          <li><span>Action Sports</span>  1/500s – 1/1000s</li>
+          <li><span>Street Photography</span>  1/250 – 1/500</li>
+          <li><span>Landscapes</span>  1/125 -1/4</li>
+          <li><span>Waterfalls or Fast Running Water</span>  1/8 – 2sec</li>
+          <li><span>Blurring Water</span>  0.5 – 5 sec</li>
+          <li><span>Fireworks</span>  2-4 sec</li>
+          <li><span>Stars (Astrophotography)</span>  15-25 sec</li>
+          <li><span>Star Trails</span>  15 min and up</li>
+          </code>
+          </ul>
+        </p>
+      </article>
+    </section>
+      <hr id="line-break">
+    <section class="main-section" id="ISO">
+<header>ISO</header>
+      <article>
+      <p>ISO is an interesting one. It brightens your photos, but it is not part of your “luminous exposure,” since it does not affect the amount of light that reaches your camera sensor (the definition of exposure). Instead, it merely brightens a photo in-camera after your sensor has already been exposed to the light.<br><br>
+
+It is useful to raise your ISO when you have no other way to brighten your photo – for example, when using a longer shutter speed will add too much motion blur, and you are already at your widest aperture. It is a very valuable setting to have, but it is not all good news. When you raise your ISO, your photos will be brighter, but you’ll also emphasize grain (otherwise known as noise) and discolored pixels in the images along the way.<br><br> The ISO scale is easy to remember. At higher numbers, your photos will be brighter, but you also will see more and more noise. <code><span>The main stops on the ISO scale are 100, 200, 400, 800, 1600, 3200, and 6400.</span> Some cameras go beyond this range, in either direction. Also, you can set intermediate ISO values at 1/3 or 1/2 stops, such as ISO 640 or ISO 1250.</code>
+        The lowest ISO on your camera is called the “base ISO.” Typically, the base ISO will be 100, but some cameras have ISO 64, ISO 200, or something else instead. This is the lowest native ISO on your camera. If you set your base ISO and expose your photo properly, you will end up with the best possible image quality and the lowest amount of visible noise.
+        
+        </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Metering_modes">
+<header>Metering modes</header>
+      <article>
+      <p>Metering is how your camera determines what the correct shutter speed and aperture should be, depending on the amount of light that goes into the camera and the ISO. Back in the old days of photography, cameras were not equipped with a light “meter”, which is a sensor that measures the amount and intensity of light. Photographers had to use hand-held light meters to determine the optimal exposure.<br><br>
+        Today, every DSLR has an integrated light meter that automatically measures the reflected light and determines the optimal exposure. 
+       <ol> <code>The most common metering modes in digital cameras today are:
+
+         <li><span>Matrix Metering</span> (Nikon), also known as <span>Evaluative Metering</span> (Canon)</li>
+         <li><span>Center-weighted Metering</span></li>
+         <li><span>Spot Metering</span></li></code></ol>
+        </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Histograms">
+<header>Histograms</header>
+      <article>
+      <p>The histogram shows you a mathematical review of an exposure after the photo has been taken. It essentially tells you how evenly exposed a photo is.<br><br>
+
+LCD screens aren’t very good at showing you this information through their display of the image. This is because they are affected by the ambient lighting conditions you’re in and the brightness of the screen itself.<br><br>
+
+That’s why the histogram is such a powerful tool to utilize in beginning photography correctly.<br><br>
+       <img id="histogram-img" src="https://i.ibb.co/wRYwZZs/histogram.png" alt="histogram"> 
+        </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Shooting_modes">
+<header>Shooting modes</header>
+      <article>
+      <p>When you buy a digital camera, it will come with a selection of camera modes.
+
+These are pre-programmed settings that allow you to choose the optimum shutter speed and aperture value for the photograph you want to take.
+
+They are useful when you are starting out, but also for the experienced photographer who needs to capture a shot fast.<br><br>
+        <code>
+          <span>Auto Mode</span><br> Automatic Exposure is when the camera chooses the optimum shutter speed, aperture, ISO and flash settings for your shot.
+
+All you need to do is point and shoot.
+
+This can be good if you have no idea of what settings to choose and also when you need to shoot quickly. </code>
+           <code><span>Portrait Mode</span><br> Portrait mode will “think” that there is a subject in the foreground of the frame and choose a shallow depth of field to keep the human subject in focus but the background blurred.
+ </code>
+           <code><span>Macro Mode</span><br> Macro mode is very useful for taking photographs of subjects smaller than your hand.
+
+Remember that macro mode will not give you super close up images; for this, you will need a macro lens. Macro mode will work best in bright conditions and will choose a shallow depth of field to focus on the subject. Therefore, if light is low, use a tripod.
+
+Your focusing also has to be more precise when taking a macro image. This is because when you use a shallow depth of field, you give yourself a smaller margin for error. </code>
+           <code><span>Landscape Mode</span><br> Landscape mode usually uses a small aperture (high f/number) to create a well-focused image from the foreground into the distance (on older cameras, the setting was ‘infinity’).
+
+Landscape mode tends to suit a wide lens and works well if the scene is well lit. It will use flash if it reads the foreground as too dark, but you can manually turn this off. </code>
+           <code><span>Sports Mode</span> <br>Because sports are fast-paced activities, sports mode will give you a high shutter speed of at least 1/500 – 1/1000 of a second.
+
+With a high shutter speed to freeze movement, means that the flash is usually not necessary.
+
+Sports mode can work well alongside continuous shooting mode, where images are taken consecutively resulting in many shots that capture the action. </code> 
+          <code><span>Night Portrait Mode</span><br> In the night portrait mode, the camera will try to balance the darkness of the background with the need to light the subject in the foreground.
+
+The aperture will have to be fairly wide to allow enough light in to capture the background and keep the subject in focus, but at the same time flash is necessary to illuminate the person and avoid blur.
+
+ </code>
+          <ul><code><span>Advanced Camera Modes</span><br>On most DSLR cameras, there will also be the letter modes – M (Manual), AV (Aperture-Priority), TV or S (Shutter-Priority) and P (Programmed Auto).
+
+             <li><span>Manual mode</span> required the photographer to set every single setting.</li>
+<li><span>Aperture-Priority</span>  allows the photographer to set the aperture value and the camera automatically sets the correct shutter speed.
+<li><span>TV</span>  lets the photographer choose the shutter speed first, and the camera automatically sets the correct aperture.</li>
+<li><span>P-Program</span>  mode is similar to Auto mode in that the shutter and aperture settings are determined by the camera, but the photographer can adjust other settings manually.</li>
+          </ul></code>
+        </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Depth_of_field">
+<header>Depth of field</header>
+      <article>
+      <p>A basic definition of depth of field is: the zone of acceptable sharpness within a photo that will appear in focus. In every picture there is a certain area of your image in front of, and behind the subject that will appear in focus.<br><br>
+        Three main factors that will affect how you control the depth of field of your images are: aperture (f-stop), distance from the subject to the camera, and focal length of the lens on your camera.<br><br>
+        <ul><code><span>Increase depth of field</span>
+
+          <li>Narrow your aperture (larger f-number)</li>
+          <li>Move farther from the subject</li>
+          <li>Shorten focal length</li><br>
+          <span>Decrease depth of field</span>
+
+          <li>Widen your aperture (smaller f-number)</li>
+          <li>Move closer to the subject</li>
+          <li>Lengthen your focal length</li></code></ul>
+
+        </p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="White_balance">
+      <header>White balance </header>
+      <article>
+      <p>White balance (WB) is the process of removing unrealistic color casts, so that objects which appear white in person are rendered white in your photo. Proper camera white balance has to take into account the "color temperature" of a light source, which refers to the relative warmth or coolness of white light. Our eyes are very good at judging what is white under different light sources, but digital cameras often have great difficulty with auto white balance (AWB) — and can create unsightly blue, orange, or even green color casts. Understanding digital white balance can help you avoid these color casts, thereby improving your photos under a wider range of lighting conditions.
+
+</p>
+      </article>
+    </section>
+    <hr id="line-break">
+      <section class="main-section" id="Focal_length">
+        <header>Focal length</header>
+        <article>
+      <p>One of the most important reasons why you buy a lens is down to the focal length. This little piece of information lets you know how close you need to be in relation to the subject you are capturing.
+
+A longer focal length is necessary for objects further away. A smaller focal length captures more of the scene in front of you. <br><br>Lenses are divided into two possibilities. there are the ones that have a fixed focal length (prime lenses) and those that have a variable focal length (zoom lenses). Prime lenses are sharper and often have a wider aperture, great for low light conditions.
+
+Zoom lenses allow you to use one lens to cover a range of different photography fields. One lens means less time searching for and changing lenses. There are advantages and drawbacks to both systems, so having a mixture of the two gives you versatility.</p>
+        </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Crop_factor">
+        <header>Crop factor</header>
+      <article>
+      <p>Crop factor describes the size difference between a 35mm film frame and your camera's sensor. For example, if your camera has a crop factor of 2, it means that a 35mm film frame is twice as large as your camera's sensor.
+
+Modern digital cameras are fitted with sensors of varying size. The best digital SLRs have sensors which are the same size as 35mm film, so they have a crop factor of 1 (this is known as "full-frame"). At the other end of the scale, digital compact cameras have very small sensors, and high crop factors of 5 of 6. The higher the crop factor, the more noticeable the "zooming in" effect for a given focal length.<br><br>
+
+You can calculate your camera's crop factor by dividing the diagonal length of a 35mm frame by the diagonal length of your camera's sensor. The numbers can get a bit convoluted, but thankfully camera manufacturers list the crop factor in the user manual to save you time and effort.</p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Polarizing_filters">
+        <header>Polarizing filters</header>
+      <article>
+      <p>Polarizing filters only allow light into the lens from a certain direction. This results in the removal of glare and reflections from non-metallic objects.
+
+Water and glass are the most affected, as well as haze from the sky. Cutting out these reflections and anomalies will make for more naturally saturated colors.
+
+Not only does this look great but it cannot be replicated in post-production, hence it’s so important to understand.
+
+</p>
+      </article>
+    </section>
+    <hr id="line-break">
+    <section class="main-section" id="Composition">
+        <header>Composition</header>
+      <article>
+      <p>The composition of an image is simply the way all the individual subjects within our frame combine to form the final image. There are no fixed rules in photography, but there are guidelines which can often help you to enhance the impact of your photos. <br><br>
+        <code><span>Rule of Thirds</span><br>Imagine that your image is divided into 9 equal segments by 2 vertical and 2 horizontal lines. The rule of thirds says that you should position the most important elements in your scene along these lines, or at the points where they intersect.
+
+Doing so will add balance and interest to your photo. Some cameras even offer an option to superimpose a rule of thirds grid over the LCD screen, making it even easier to use.</code>
+        <code><span>Balancing Elements</span><br>Placing your main subject off-centre, as with the rule of thirds, creates a more interesting photo, but it can leave a void in the scene which can make it feel empty. You can achieve a balanced composition and even out the main subject's "visual weight" by including another object of lesser importance to fill the space.
+        </code>
+        <code><span>Leading Lines</span><br>When we look at a photo our eye is naturally drawn along lines. By thinking about how you place these leading lines in your composition, you can affect the way we view the image, pulling us into the picture, towards the subject, or on a journey "through" the scene.<br>
+
+There are many different types of line - straight, diagonal, curvy, zigzag, radial etc - and each can be used to enhance our photo's composition.<br>
+        </code>
+        <code><span>Symmetry and Patterns</span><br>We are surrounded by symmetry and patterns, both natural and man-made. They can make for very eye-catching compositions, particularly in situations where they are not expected. Another great way to use them is to break the symmetry or pattern in some way, introducing tension and a focal point to the scene.<br>
+        </code>
+        <code><span>Viewpoint</span><br>Before photographing your subject, take time to think about where you will shoot it from. Our viewpoint has a massive impact on the composition of our photo, and as a result it can greatly affect the message that the shot conveys. Rather than just shooting from eye level, consider photographing from high above, down at ground level, from the side, from the back, from a long way away, from very close up, and so on.<br>
+        </code>
+         </code>
+        <code><span>Background</span><br>How many times have you taken what you thought would be a great shot, only to find that the final image lacks impact because the subject blends into a busy background? The human eye is excellent at distinguishing between different elements in a scene, whereas a camera has a tendency to flatten the foreground and background, and this can often ruin an otherwise great photo. Thankfully this problem is usually easy to overcome at the time of shooting - look around for a plain and unobtrusive background and compose your shot so that it doesn't distract or detract from the subject.
+        </code>
+       </code>
+        <code><span>Depth</span><br>Because photography is a two-dimensional medium, we have to choose our composition carefully to conveys the sense of depth that was present in the actual scene. You can create depth in a photo by including objects in the foreground, middle ground and background. Another useful composition technique is overlapping, where you deliberately partially obscure one object with another. The human eye naturally recognises these layers and mentally separates them out, creating an image with more depth.
+        </code>
+ </code>
+        <code><span>Framing</span><br>The world is full of objects which make perfect natural frames, such as trees, archways and holes. By placing these around the edge of the composition you help to isolate the main subject from the outside world. The result is a more focused image which draws your eye naturally to the main point of interest.
+        </code>
+
+        <code><span>Cropping</span><br>Often a photo will lack impact because the main subject is so small it becomes lost among the clutter of its surroundings. By cropping tight around the subject you eliminate the background "noise", ensuring the subject gets the viewer's undivided attention.
+        </code>
+ <code><span>Experimentation</span><br>With the dawn of the digital age in photography we no longer have to worry about film processing costs or running out of shots. As a result, experimenting with our photos' composition has become a real possibility; we can fire off tons of shots and delete the unwanted ones later at absolutely no extra cost. Take advantage of this fact and experiment with your composition - you never know whether an idea will work until you try it.
+        </code>
+Composition in photography is far from a science, and as a result all of the "rules" above should be taken with a pinch of salt. If they don't work in your scene, ignore them; if you find a great composition that contradicts them, then go ahead and shoot it anyway. But they can often prove to be spot on, and are worth at least considering whenever you are out and about with your camera.
+        </p>
+      </article>
+    </section>
+</main>
+     </div>
+
+</div>
+</html>
